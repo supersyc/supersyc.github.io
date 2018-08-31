@@ -87,16 +87,16 @@
 <meta property="og:site_name" content="不积跬步，无以至千里">
 <meta property="og:description" content="本篇文章的目的是就自己阅读Spring代码和相关技术栈的一些心得体会做一些总结，方便快速上手Spring相关的技术栈，如Spring Cloud，文章不长，大约花费5分钟时间。 （介绍一，可以略过）Spring强大的扩展能力，促进了其与新技术的融合，维护了它持久的生命力，熟悉Spring是软件特别是互联网开发人员的基本功之一，特别是在以Spring Boot为基础搭建的微服务大行其道的当下。 （">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2018/08/30/如何快速熟悉Spring技术栈/spring.jpg">
-<meta property="og:image" content="http://yoursite.com/2018/08/30/如何快速熟悉Spring技术栈/ApplicationContext与BeanFactory关系.png">
-<meta property="og:image" content="http://yoursite.com/2018/08/30/如何快速熟悉Spring技术栈/ApplicationContext包含BeanFactory属性.png">
-<meta property="og:image" content="http://yoursite.com/2018/08/30/如何快速熟悉Spring技术栈/BeanPostProcessor继承类.png">
-<meta property="og:image" content="http://yoursite.com/2018/08/30/如何快速熟悉Spring技术栈/微信公众号.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/08/30/如何快速熟悉Spring技术栈/如何快速熟悉Spring技术栈/spring.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/08/30/如何快速熟悉Spring技术栈/如何快速熟悉Spring技术栈/ApplicationContext与BeanFactory关系.png">
+<meta property="og:image" content="http://yoursite.com/2018/08/30/如何快速熟悉Spring技术栈/如何快速熟悉Spring技术栈/ApplicationContext包含BeanFactory属性.png">
+<meta property="og:image" content="http://yoursite.com/2018/08/30/如何快速熟悉Spring技术栈/如何快速熟悉Spring技术栈/BeanPostProcessor继承类.png">
+<meta property="og:image" content="http://yoursite.com/2018/08/30/如何快速熟悉Spring技术栈/如何快速熟悉Spring技术栈/微信公众号.jpg">
 <meta property="og:updated_time" content="2018-08-30T11:36:37.839Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何快速熟悉Spring技术栈">
 <meta name="twitter:description" content="本篇文章的目的是就自己阅读Spring代码和相关技术栈的一些心得体会做一些总结，方便快速上手Spring相关的技术栈，如Spring Cloud，文章不长，大约花费5分钟时间。 （介绍一，可以略过）Spring强大的扩展能力，促进了其与新技术的融合，维护了它持久的生命力，熟悉Spring是软件特别是互联网开发人员的基本功之一，特别是在以Spring Boot为基础搭建的微服务大行其道的当下。 （">
-<meta name="twitter:image" content="http://yoursite.com/2018/08/30/如何快速熟悉Spring技术栈/spring.jpg">
+<meta name="twitter:image" content="http://yoursite.com/2018/08/30/如何快速熟悉Spring技术栈/如何快速熟悉Spring技术栈/spring.jpg">
 
 
 
@@ -417,7 +417,7 @@
       
 
       
-        <p><img src="/2018/08/30/如何快速熟悉Spring技术栈/spring.jpg" alt="spring"></p>
+        <p><img src="如何快速熟悉Spring技术栈\spring.jpg" alt="spring"></p>
 <p>本篇文章的目的是就自己阅读Spring代码和相关技术栈的一些心得体会做一些总结，方便快速上手Spring相关的技术栈，如Spring Cloud，文章不长，大约花费5分钟时间。</p>
 <p>（介绍一，可以略过）Spring强大的扩展能力，促进了其与新技术的融合，维护了它持久的生命力，熟悉Spring是软件特别是互联网开发人员的基本功之一，特别是在以Spring Boot为基础搭建的微服务大行其道的当下。</p>
 <p>（介绍二，可以继续略过）Spring Boot是构建微服务的基础，它针对Spring较重的开发部署流程进行了简化，使得上下游不同框架的融合、配置开发、部署变得非常简单，但它的底层核心仍然是Spring。</p>
@@ -425,10 +425,10 @@
 <p>IOC：<a href="https://javadoop.com/post/spring-ioc#" target="_blank" rel="noopener">Spring IOC 容器源码分析</a></p>
 <p>AOP：<a href="https://juejin.im/post/591d8c8ba22b9d00585007dd" target="_blank" rel="noopener">Spring-aop 全面解析</a></p>
 <p>Spring整体来讲是个Bean的管理容器，最主要的核心就是Bean（Bean可以通过id或name区分，也可以通过class type区分），从XML文件或者注解声明中将Bean的定义抽象成Beandefinition（Beandefinition的来源多种多样，除了自己显示定义的，用于特殊处理的BeanDefinitionRegistryPostProcessor本身也是Beandefinition），Beandefinition通过Beanfactory管理，Beanfactory作为Applicationcontext 的内部属性，不同的Applicationcontext 之间有层级关系，在寻找bean的过程中可以沿着这种层级关系寻找（在自己内部的Beanfactory找不到的话再向上层父级寻找），然后通过Beandefinition来初始化Bean。</p>
-<p><img src="/2018/08/30/如何快速熟悉Spring技术栈/ApplicationContext与BeanFactory关系.png" alt="ApplicationContext与BeanFactory关系"></p>
-<p><img src="/2018/08/30/如何快速熟悉Spring技术栈/ApplicationContext包含BeanFactory属性.png" alt="ApplicationContext包含BeanFactory属性"></p>
+<p><img src="如何快速熟悉Spring技术栈\ApplicationContext与BeanFactory关系.png" alt="ApplicationContext与BeanFactory关系"></p>
+<p><img src="如何快速熟悉Spring技术栈\ApplicationContext包含BeanFactory属性.png" alt="ApplicationContext包含BeanFactory属性"></p>
 <p>初始化过程中可以设立很多的扩展点（如初始化之前、之后），具体可以看BeanPostProcessor等扩展机制 （我们在开发过程中也可以结合自定义注解针对此做一些扩展开发）。</p>
-<p><img src="/2018/08/30/如何快速熟悉Spring技术栈/BeanPostProcessor继承类.png" alt="BeanPostProcessor继承类"></p>
+<p><img src="如何快速熟悉Spring技术栈\BeanPostProcessor继承类.png" alt="BeanPostProcessor继承类"></p>
 <p>IOC的原理就是通过第三方也就是Spring容器将一个Bean注入到另一个Bean（即依赖注入），通过属性、构造方法等方式，循环依赖和注入时机需要关注下。</p>
 <p>AOP的原理就是在上文描述的扩展点（即beanpostprocessor的扩展点）通过动态代理（jdk dynamic proxy和cglib要重点了解）将一个Bean转换成动态代理Bean，而动态代理Bean就可以在原本Bean的执行代码前后加入一些自己的扩展（Spring caching和Transaction都是基于此实现的）。</p>
 <p>Spring Boot和传统Spring开发一个显著的不同就是大量的注解，注解是什么呢，就是用来描述类、字段、方法的元数据，有些可能在编译之前就被去掉了，有些会被编译进class文件，注解本身是没有什么作用的，但是在Bean处理过程中根据这些元数据做一些特殊处理，就使得注解的作用威力无穷了。</p>
@@ -441,7 +441,7 @@
 <p>4、对于影响性能的关键技术实现，就要去抠细节了，主要和Threadlocal（保存上下文变量）、缓存、连接池、线程池、减少运行时反射处理等有关。</p>
 <p>通过以上的几点，我快速理清了Spring Cloud技术栈(zuul/eureka/feign/ribbon/apollo)的源码大体处理流程，不过Spring Cloud中熔断器Hystrix大量使用了响应式编程（Rxjava），这个还是比较绕的，建议先看简单的例子，琢磨清楚了subscriber是如何向上传递的以及结果集是如何向下发射的，再加上subscribeon和observeon线程池对于数据传递的影响，再去看就比较容易了。</p>
 <p>对于Rxjava再加上一个传送门：<a href="https://blog.piasy.com/AdvancedRxJava/2016/09/16/subscribeon-and-observeon/" target="_blank" rel="noopener">Rxjava</a></p>
-<p><img src="/2018/08/30/如何快速熟悉Spring技术栈/微信公众号.jpg" alt="68号下喇叭"></p>
+<p><img src="如何快速熟悉Spring技术栈\微信公众号.jpg" alt="68号下喇叭"></p>
 
       
     </div>
